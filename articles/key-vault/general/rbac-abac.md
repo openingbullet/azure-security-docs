@@ -55,7 +55,7 @@ The condition version must be set to `2.0`. For the complete grammar, see [Azure
 Azure Key Vault ABAC conditions support all the string comparison operators defined in the Azure ABAC condition format. For the full list of operators and their behavior, see [String comparison operators](/azure/role-based-access-control/conditions-format#string-comparison-operators).
 
 > [!NOTE]
-> Azure ABAC string comparison operators are case-sensitive, but Key Vault vault names and object names are case-insensitive and are normalized to lowercase. As a result, case-sensitive matching doesn't apply to Key Vault ABAC conditions. Use lowercase values in your conditions - a value containing uppercase characters won't match any vault or secret name.
+> Azure ABAC string comparison operators include case-sensitive variants, but Key Vault vault names and object names are case-insensitive and are normalized to lowercase. As a result, case-sensitive matching doesn't apply to Key Vault ABAC conditions. Use lowercase values in your conditions - a value containing uppercase characters won't match any vault or secret name.
 
 ## Azure Key Vault actions
 
