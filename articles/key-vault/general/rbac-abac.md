@@ -6,7 +6,7 @@ ms.author: mbaldwin
 ms.service: azure-key-vault
 ms.subservice: general
 ms.topic: reference
-ms.date: 06/12/2026
+ms.date: 08/25/2026
 ms.custom: sfi-image-nochange
 ai-usage: ai-assisted
 ---
@@ -55,7 +55,7 @@ The condition version must be set to `2.0`. For the complete grammar, see [Azure
 Azure Key Vault ABAC conditions support all the string comparison operators defined in the Azure ABAC condition format. For the full list of operators and their behavior, see [String comparison operators](/azure/role-based-access-control/conditions-format#string-comparison-operators).
 
 > [!NOTE]
-> All string operators are case-sensitive. A condition with `StringStartsWith 'test-app'` doesn't match a secret named `Test-App-Secret`. Use consistent casing in your naming conventions.
+> Azure ABAC string comparison operators include case-sensitive variants, but Key Vault vault names and object names are case-insensitive and are normalized to lowercase. As a result, case-sensitive matching doesn't apply to Key Vault ABAC conditions. Use lowercase values in your conditions - a value containing uppercase characters won't match any vault or secret name.
 
 ## Azure Key Vault actions
 
@@ -265,7 +265,6 @@ Behavior:
 
 - Allowed: Reading `test-app-secret1`.
 - Denied (`ForbiddenByRbac`): Reading `test-db-password`.
-- Denied (case-sensitive match): Reading `Test-App-Secret1`.
 
 ### Example: Restrict access to secrets in specific vaults by vault name prefix
 
