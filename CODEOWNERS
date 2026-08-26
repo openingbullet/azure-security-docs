@@ -1,0 +1,11 @@
+# Codeowners file
+# Each line is a file pattern followed by one or more owners.
+# Owners are automatically requested for review on pull requests that change
+# matching files. Order matters: the last matching pattern takes precedence.
+
+/articles/attestation/         @msmbaldwin
+/articles/cloud-hsm/           @msmbaldwin
+/articles/confidential-ledger/ @msmbaldwin
+/articles/dedicated-hsm/       @msmbaldwin
+/articles/key-vault/           @msmbaldwin
+/articles/payment-hsm/         @msmbaldwin
